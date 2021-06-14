@@ -1,0 +1,8 @@
+version: "3"
+services:
+  calishot:
+    build: .
+    container_name: calishot
+    restart: always
+    ports:
+      - 12684:8001

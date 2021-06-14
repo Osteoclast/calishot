@@ -3,6 +3,8 @@ FROM python:3.8-slim
 #this is a really simple image that does the job with minimal requirements. 
 #I included both the english and non-english DB so they can be accessed from the same container and page, but if you want to only use one of them just comment/delete the relevant COPY command and edit the entry CMD
 
+#the index.db files must be in the same folder as this Dockerfile when the image is built.
+
 RUN pip install datasette datasette-json-html datasette-pretty-json
 RUN mkdir /dataset
 WORKDIR /dataset
